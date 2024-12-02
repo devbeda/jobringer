@@ -15,7 +15,12 @@ function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
   return (
-    <div className=" sticky top-0 z-10 bg-white w-full h-12 md:h-16 flex items-center justify-between px-4 py-2 shadow-md">
+    <motion.div
+      initial={{  y: "-100%" }}
+      animate={{  y: 0 }}
+      transition={{ duration: 0.7}}
+      className=" sticky top-0 z-10 bg-white w-full h-12 md:h-16 flex items-center justify-between px-4 py-2 shadow-md"
+    >
       <Link to={"/"}>
         <h1 className="text-black font-Logo tracking-wider text-xl md:text-2xl font-bold ">
           Job<span className="text-web-blue">Ringer</span>
@@ -85,7 +90,7 @@ function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 }
 

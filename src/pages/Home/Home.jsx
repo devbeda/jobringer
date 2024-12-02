@@ -4,6 +4,7 @@ import { CiSearch } from "react-icons/ci";
 import citylist from "../../assets/citylist.json";
 import JobCard from "../../components/JobCard";
 import joblist from "../../assets/joblist.json";
+import { motion } from "motion/react";
 import {
   android,
   employers1,
@@ -25,48 +26,78 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Home() {
-
   return (
     <div>
       <div className="w-full h-auto font-body bg-blue-100 flex flex-col-reverse md:flex-row  items-center justify-between px-12 py-9 ">
-        <div className="">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        >
           <p className="text-4xl sm:text-6xl md:text-8xl text-gray-400 font-heading font-bold">
             Find your won
             <br />
             <span className="text-web-blue">Dream</span> Job !
-            
           </p>
-        </div>
-        <div className="  ">
-          <img className="h-[300px] sm:h-[400px] md:h-[500px]" src={background} alt="" />
-        </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <img
+            className="h-[300px] sm:h-[400px] md:h-[500px]"
+            src={background}
+            alt=""
+          />
+        </motion.div>
       </div>
 
       <div className="flex justify-center font-Logo bg-gray-100">
         <div className="w-[80%] h-auto px-4 bg-blue-100 rounded-b-2xl flex flex-col  md:flex-row justify-center items-center py-2 gap-4 ">
           <div className="flex items-center gap-4">
-            <div className="bg-blue-500 px-4 py-2 rounded-lg text-center text-white">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              className="bg-blue-500 px-4 py-2 rounded-lg text-center text-white"
+            >
               <p>31,091</p>
               <h2>Jobs</h2>
-            </div>
-            <div className="bg-yellow-500 px-4 py-2 rounded-lg text-center text-white">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              className="bg-yellow-500 px-4 py-2 rounded-lg text-center text-white"
+            >
               <p>19,879</p>
               <h2>Employers</h2>
-            </div>
+            </motion.div>
           </div>
           <div className="flex flex-col md:flex-row gap-2">
-            <input
-              type="search"
-              placeholder="Job Title"
-              className="md:w-[400px] h-10 rounded-lg px-2 outline-web-blue"
-            />
-            <div>
-              <select className="h-full w-[300px] px-2 rounded-lg text-web-blue outline-none">
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <input
+                type="search"
+                placeholder="Job Title"
+                className="md:w-[400px] h-10 rounded-lg px-2 outline-web-blue"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <select className="h-full  md:w-[300px] px-2 rounded-lg text-web-blue outline-none">
                 {citylist.map((city) => (
                   <option>{city.city}</option>
                 ))}
               </select>
-            </div>
+            </motion.div>
             <button className="w-20 bg-yellow-400 px-4 rounded-lg hover:bg-web-blue hover:text-white duration-300 ">
               Search
             </button>
@@ -91,8 +122,11 @@ function Home() {
           ))}
         </div>
         <div className=" w-full mt-4 flex justify-center items-center">
-          <Link to={"/jobs"} className=" bg-yellow-300 px-4 py-3 rounded-3xl hover:bg-web-blue hover:text-white duration-300">
-            See More Jobs 
+          <Link
+            to={"/jobs"}
+            className=" bg-yellow-300 px-4 py-3 rounded-3xl hover:bg-web-blue hover:text-white duration-300"
+          >
+            See More Jobs
           </Link>
         </div>
       </div>
@@ -139,9 +173,8 @@ function Home() {
           </div>
         </div>
         <div className=" w-full sm:w-[60%] text-[10px] md:text-base mt-4 flex items-center justify-center">
-          Terms and conditions | Privacy Policy |
-          Refund / Cancellation Policy | About Us |
-          Contact Us | FAQ
+          Terms and conditions | Privacy Policy | Refund / Cancellation Policy |
+          About Us | Contact Us | FAQ
         </div>
       </div>
     </div>
