@@ -1,0 +1,137 @@
+[
+    {
+        "Title":"SDE I",
+        "Company": "Google",
+        "Location": "Bangalore",
+        "Mode": "In Office",
+        "Type": "Full-time",
+        "Exp":"0-2"
+    },
+    {
+        "Title":"SDE II",
+        "Company": "Amazone",
+        "Location": "Hydrabad",
+        "Mode": "In Office",
+        "Type":"Remote",
+        "Exp":"0-2"
+    },
+    {
+        "Title":"Frontend Developer",
+        "Company": "Webkul",
+        "Location": "Pune",
+        "Mode": "Hybrid",
+        "Type":"Full-time",
+        "Exp":"0-2"
+    },
+    {
+        "Title":"Mern Developer",
+        "Company": "OYO",
+        "Location": "Bangalore",
+        "Mode": "In Office",
+        "Type":"Full-time",
+        "Exp":"0-2"
+    },
+    {
+        "Title":"Backend Developer",
+        "Company": "Accenture",
+        "Location": "Hydrabad",
+        "Type": "Full-time",
+        "Mode": "Hybrid",
+        "Exp":"0-2"
+    },
+    {
+        "Title":"Data Analytics",
+        "Company": "Google",
+        "Location": "In-Office",
+        "Type": "Full-time",
+        "Mode":"Hybrid",
+        "Exp":"0-2"
+    },
+    {
+        "Title":"Full Stack Developer",
+        "Company": "TCS",
+        "Location": "Bhubneswar",
+        "Type": "Full-time",
+        "Mode":"Hybrid",
+        "Exp":"0-2"
+    },
+    {
+        "Title":"JAVA Developer",
+        "Company": "Google",
+        "Location": "Noida",
+        "Mode": "In Office",
+        "Type":"Full-time",
+        "Exp":"0-2"
+    },
+    {
+        "Title":"Mern Developer",
+        "Company": "Google",
+        "Location": "Hydrabad",
+        "Mode": "Hybrid",
+        "Type":"Full-time",
+        "Exp":"5-6"
+    },
+    {
+        "Title":"Data Analytics",
+        "Company": "Google",
+        "Location": "Bhubneswar",
+        "Mode": "Full-time",
+        "Type":"In Office",
+        "Exp":"3+"
+    },
+    {
+        "Title":"SDE II",
+        "Company": "Google",
+        "Location": "Bangalore",
+        "Type": "Full-time",
+        "Mode":"In-Office",
+        "Exp":"5-6"
+    },
+    {
+        "Title":"Full Stack Developer",
+        "Company": "Google",
+        "Location": "Bhubneswar",
+        "Type": "Full-Time",
+        "Mode":"Remote",
+        "Exp":"3+"
+    },
+    {
+        "Title":"SDE 1",
+        "Company": "Google",
+        "Location": "Noida",
+        "Mode": "Hybrid",
+        "Type": "Full-time",
+        "Exp":"0-2"
+    },
+    {
+        "Title":"Back-End Developer",
+        "Company": "Google",
+        "Location": "Noida",
+        "Type": "Full-time",
+        "Mode":"In-Office"
+    },
+    {
+        "Title":"Frontend Developer",
+        "Company": "Google",
+        "Location": "Bhubneswar",
+        "Type": "Full-time",
+        "Mode":"Remote",
+        "Exp":"5-6"
+    },
+    {
+        "Title":"Bussiness Admin",
+        "Company": "Startup.ai",
+        "Location": "Noida",
+        "Type": "Full-time",
+        "Mode":"Remote",
+        "Exp":"3+"
+    },
+    {
+        "Title":"Frontend Developer",
+        "Company": "Scemer",
+        "Location": "Bhubneswar",
+        "Type": "Full-time",
+        "Mode":"Remote",
+        "Exp":"5-6"
+    }
+]
