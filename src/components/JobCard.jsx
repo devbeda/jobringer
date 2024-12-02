@@ -4,10 +4,15 @@ import { CiLocationOn } from "react-icons/ci";
 import { MdWorkOutline } from "react-icons/md";
 import { IoIosSave } from "react-icons/io";
 import { FaShareAlt } from "react-icons/fa";
+import { motion } from "motion/react";
 
 function JobCard({ job }) {
   return (
-    <div className="group ">
+    <motion.div
+    initial={{ opacity: 0, y: 100 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7 }}
+     className="group ">
       <div className="relative md:w-[350px] md:h-[260px] w-[300px] h-[250px]  border-web-blue border-2 rounded-lg px-4 group-hover:bg-slate-800 duration-300 hover:drop-shadow-card-shadow">
         <div className="absolute right-0 bg-yellow-300 px-5 rounded-bl-lg rounded-tr-lg py-1">
           Exp: {job.Exp}
@@ -47,7 +52,7 @@ function JobCard({ job }) {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

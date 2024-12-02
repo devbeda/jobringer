@@ -31,8 +31,9 @@ function Home() {
       <div className="w-full h-auto font-body bg-blue-100 flex flex-col-reverse md:flex-row  items-center justify-between px-12 py-9 ">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
+          
         >
           <p className="text-4xl sm:text-6xl md:text-8xl text-gray-400 font-heading font-bold">
             Find your won
@@ -42,8 +43,9 @@ function Home() {
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
+          
         >
           <img
             className="h-[300px] sm:h-[400px] md:h-[500px]"
@@ -58,8 +60,9 @@ function Home() {
           <div className="flex items-center gap-4">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
+              
               className="bg-blue-500 px-4 py-2 rounded-lg text-center text-white"
             >
               <p>31,091</p>
@@ -67,8 +70,9 @@ function Home() {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
+              
               className="bg-yellow-500 px-4 py-2 rounded-lg text-center text-white"
             >
               <p>19,879</p>
@@ -78,8 +82,8 @@ function Home() {
           <div className="flex flex-col md:flex-row gap-2">
             <motion.div
               initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
               <input
                 type="search"
@@ -89,8 +93,8 @@ function Home() {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
               <select className="h-full  md:w-[300px] px-2 rounded-lg text-web-blue outline-none">
                 {citylist.map((city) => (
@@ -98,46 +102,73 @@ function Home() {
                 ))}
               </select>
             </motion.div>
-            <button className="w-20 bg-yellow-400 px-4 rounded-lg hover:bg-web-blue hover:text-white duration-300 ">
-              Search
-            </button>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="flex justify-center items-center w-20"
+            >
+              <button className="w-full h-full bg-yellow-400 px-4 rounded-lg hover:bg-web-blue hover:text-white duration-300 ">
+                Search
+              </button>
+            </motion.div>
           </div>
         </div>
       </div>
 
       <div className="w-full h-auto  justify-center items-center font-Logo bg-gray-100 py-8">
-        <div className="flex justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="flex justify-center items-center"
+        >
           <h2 className="text-2xl md:text-3xl font-semibold text-web-dark-blue border-gray-400 border-b-2">
             Jobs for you
           </h2>
-        </div>
-        <div className=" w-full hidden my-2 items-center justify-center md:grid grid-rows-2 grid-flow-col gap-9 ">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className=" w-full hidden my-2 items-center justify-center md:grid grid-rows-2 grid-flow-col gap-9 ">
           {joblist.slice(0, 6).map((job, index) => (
             <JobCard key={index} job={job} />
           ))}
-        </div>
+        </motion.div>
         <div className="w-full  my-2 items-center justify-center grid md:hidden grid-rows-3 grid-flow-col gap-9 ">
           {joblist.slice(0, 3).map((job, index) => (
             <JobCard key={index} job={job} />
           ))}
         </div>
-        <div className=" w-full mt-4 flex justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className=" w-full mt-4 flex justify-center items-center">
           <Link
             to={"/jobs"}
             className=" bg-yellow-300 px-4 py-3 rounded-3xl hover:bg-web-blue hover:text-white duration-300"
           >
             See More Jobs
           </Link>
-        </div>
+        </motion.div>
       </div>
 
       <div className="w-full h-auto font-heading">
-        <div className="flex justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="flex justify-center items-center">
           <p className=" text-xl md:text-2xl font-semibold text-web-darkest-blue border-gray-400 border-b-2 ">
             FEATURED EMPLOYERS
           </p>
-        </div>
-        <div className="w-full grid grid-rows-3 md:grid-rows-2 grid-flow-col items-center justify-center gap-x-20 px-4">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }} className="w-full grid grid-rows-3 md:grid-rows-2 grid-flow-col items-center justify-center gap-x-20 px-4">
           <img src={employers1} alt="" />
           <img src={employers2} alt="" />
           <img src={employers3} alt="" />
@@ -146,10 +177,13 @@ function Home() {
           <img src={employers6} alt="" />
           <img src={employers7} alt="" />
           <img src={employers8} alt="" />
-        </div>
+        </motion.div>
       </div>
 
-      <div className="w-full h-[200px] flex flex-col items-center bg-gray-100 px-4 py-2 font-Logo">
+      <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }} className="w-full h-[200px] flex flex-col items-center bg-gray-100 px-4 py-2 font-Logo">
         <div className="w-full flex flex-col md:flex-row items-center">
           <div className="md:w-[50%]">
             <h2 className=" text-center text-xl sm:text-3xl font-bold text-web-orange">
@@ -176,7 +210,7 @@ function Home() {
           Terms and conditions | Privacy Policy | Refund / Cancellation Policy |
           About Us | Contact Us | FAQ
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
